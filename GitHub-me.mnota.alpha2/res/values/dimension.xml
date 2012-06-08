@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="iconpadding">8dp</dimen>
+    <dimen name="sidepadding">16dp</dimen>
+    <dimen name="buttonpadding">4dp</dimen>
+    <dimen name="actionbarsize">48dp</dimen>
+    <dimen name="iconsize">32dp</dimen>
+    <dimen name="iconbacksize">47dp</dimen>
+    <dimen name="textsize">16dp</dimen>
+    <dimen name="mainbtnsize">100dp</dimen>
+    
+</resources>
