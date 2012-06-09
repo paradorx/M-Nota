@@ -22,6 +22,8 @@
             </intent-filter>
         </activity>
         <activity android:name="subjectlist"></activity>
+        <activity android:name="notelist"></activity>
+        <activity android:name="tetapan"></activity>
     </application>
 
 </manifest>
