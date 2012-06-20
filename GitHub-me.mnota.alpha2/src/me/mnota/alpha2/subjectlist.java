@@ -66,17 +66,14 @@ public class subjectlist extends SherlockActivity {
     		return true;
 	
     	case PREFS:
-    		Toast.makeText( subjectlist.this, "Button PREFS is clicked", Toast.LENGTH_SHORT).show();
     		openIntent(PREFS);
     		return true;
     		
     	case SEARCH:
-    		Toast.makeText( subjectlist.this, "Button SEARCH is clicked", Toast.LENGTH_SHORT).show();
     		return true;
     		
     	//used for UP navigation button
     	case HOME:
-			Toast.makeText( subjectlist.this, "Button HOME is clicked", Toast.LENGTH_SHORT).show();
 			openIntent(HOME);
 			return true;
     	
@@ -87,14 +84,21 @@ public class subjectlist extends SherlockActivity {
     
     //start of openIntent-----------------------------------------------------------
     public void openIntent(int intentInput){
-    	if (intentInput==PREFS){
+    	
+    	switch (intentInput){
+    	
+    	case PREFS:
     		i = new Intent(this, tetapan.class);
             startActivity(i);
-    	}
-    	else if (intentInput==HOME){
+    		break;
+    		
+    	case HOME:
     		i = new Intent(this, mainmenu.class);
     		i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(i);
+            break;
+    		
     	}
+    	
     }//end of openIntent------------------------------------------------------------
 }

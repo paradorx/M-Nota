@@ -23,7 +23,7 @@
                 android:layout_width="@dimen/mainbtnsize"
                 android:layout_height="@dimen/mainbtnsize"
                 android:layout_gravity="center_horizontal"
-                android:background="@raw/ic_nota" />
+                android:background="@drawable/buttonnota" />
             
             <TextView
                 android:id="@+id/txtnota"
@@ -48,7 +48,7 @@
                 android:layout_width="@dimen/mainbtnsize"
                 android:layout_height="@dimen/mainbtnsize"
                 android:layout_gravity="center_horizontal"
-                android:background="@raw/ic_subjek" />
+                android:background="@drawable/buttonsubjek" />
             
             <TextView
                 android:id="@+id/txtsubjek"

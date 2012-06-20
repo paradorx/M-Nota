@@ -64,18 +64,15 @@ public class notelist extends SherlockActivity {
 	    		return true;
 	    	
 	    	case SUBJECT:
-	    		Toast.makeText( notelist.this, "Button SUBJECT is clicked", Toast.LENGTH_SHORT).show();
 	    		openIntent(SUBJECT);
 	    		return true;
 	    		
 	    	case PREFS:
-	    		Toast.makeText( notelist.this, "Button PREFS is clicked", Toast.LENGTH_SHORT).show();
 	    		openIntent(PREFS);
 	    		return true;
     		
         	//used for UP navigation button
         	case HOME:
-    			Toast.makeText( notelist.this, "Button HOME is clicked", Toast.LENGTH_SHORT).show();
     			openIntent(HOME);
     			return true;
 
@@ -87,18 +84,25 @@ public class notelist extends SherlockActivity {
 	    //start of openIntent-----------------------------------------------------------
 	    public void openIntent(int intentInput){
 	    	
-	    	if (intentInput==SUBJECT){
+	    	switch (intentInput){
+	    	
+	    	case SUBJECT:
 	    		i = new Intent(this, subjectlist.class);
 	            startActivity(i);
-	    	}
-	    	else if (intentInput==PREFS){
+	    		break;
+	    		
+	    	case PREFS:
 	    		i = new Intent(this, tetapan.class);
 	            startActivity(i);
-	    	}
-	    	else if (intentInput==HOME){
+	    		break;
+	    		
+	    	case HOME:
 	    		i = new Intent(this, mainmenu.class);
 	    		i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 	            startActivity(i);
+	            break;
+	    		
 	    	}
+
 	    }//end of openIntent------------------------------------------------------------
 }

@@ -3,13 +3,13 @@ package me.mnota.alpha2;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
+import android.view.View.OnClickListener;
 
 import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
 
-public class mainmenu extends SherlockActivity {
+public class mainmenu extends SherlockActivity implements OnClickListener {
 	
 	private Intent i;
 
@@ -31,24 +31,26 @@ public class mainmenu extends SherlockActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         
-        //start of setOnClickListener subjek button
-        findViewById(R.id.btnsubjek).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-            	Toast.makeText( mainmenu.this, "Button SUBJEK is clicked", Toast.LENGTH_SHORT).show();
-            	openIntent(SUBJECT);
-            }
-        });// end of setOnClickListener subjek button
+        //set setOnClickListener subjek button
+        findViewById(R.id.btnsubjek).setOnClickListener(this);
 
         //start of setOnClickListener note button
-        findViewById(R.id.btnnota).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-            	Toast.makeText( mainmenu.this, "Button NOTA is clicked", Toast.LENGTH_SHORT).show();
-            	openIntent(NOTE);
-            }
-        });// end of setOnClickListener note button
+        findViewById(R.id.btnnota).setOnClickListener(this);
     }
+    
+	@Override
+	public void onClick(View view) {
+		switch (view.getId()) {
+		
+		case R.id.btnsubjek:
+			openIntent(SUBJECT);
+			break;
+			
+		case R.id.btnnota:
+			openIntent(NOTE);
+			break;
+		}
+	}
     
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -67,7 +69,6 @@ public class mainmenu extends SherlockActivity {
     	switch (item.getItemId()) {
 
     	case PREFS:
-    		Toast.makeText( mainmenu.this, "Button PREFS is clicked", Toast.LENGTH_SHORT).show();
     		openIntent(PREFS);
     		return true;
     	
@@ -78,19 +79,24 @@ public class mainmenu extends SherlockActivity {
     
     //start of openIntent-----------------------------------------------------------
     public void openIntent(int intentInput){
+    	switch (intentInput){
     	
-    	if (intentInput==SUBJECT){
+    	case SUBJECT:
     		i = new Intent(this, subjectlist.class);
             startActivity(i);
-    	}
-    	else if (intentInput==NOTE){
+    		break;
+    		
+    	case NOTE:
     		i = new Intent(this, notelist.class);
             startActivity(i);
-    	}
-    	else if (intentInput==PREFS){
+    		break;
+    		
+    	case PREFS:
     		i = new Intent(this, tetapan.class);
             startActivity(i);
+    		break;
     	}
+
     }//end of openIntent------------------------------------------------------------
     
 }
