@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <PreferenceCategory android:title="NOTIFIKASI">
+        <SwitchPreference android:summary="Notifikasi di status bar atau toast" android:title="Jenis notifikasi"/>
+		<ListPreference android:summary="kekerapan mencapai fail yang baru dimuat naik" android:title="Kekerapan notifikasi" android:dialogTitle="Kekerapan Notifikasi"/>
+        <CheckBoxPreference android:summary="hanya mencapai maklumat apabila ada Wi-Fi" android:title="Notifikasi Menggunakan Wi-Fi"/>
+	</PreferenceCategory>
+    <PreferenceCategory android:title="PENYIMPANAN FAIL">
+        <EditTextPreference android:title="Folder utama" android:summary="Folder utama untuk menyimpan fail dimuat turun" android:dialogTitle="Lokasi Folder"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="M-NOTA">
+        <Preference android:title="Mengenai M-NOTA" android:summary="Build version: 0.1a"/>
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/mainbg"
+    android:orientation="vertical" >
+
+    <!-- LinearLayout: Center the Buttons -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" >
+
+        <!-- LinearLayout: Place Note Button and Text -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            
+            <Button
+                android:id="@+id/btnnota"
+                android:layout_width="@dimen/mainbtnsize"
+                android:layout_height="@dimen/mainbtnsize"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/buttonnota" />
+            
+            <TextView
+                android:id="@+id/txtnota"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/mainnota"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/maintxtcolour" />
+            
+        </LinearLayout>
+        
+        <!-- LinearLayout: Place Subject Button and Text -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/iconsize"
+            android:orientation="vertical" >
+            
+            <Button
+                android:id="@+id/btnsubjek"
+                android:layout_width="@dimen/mainbtnsize"
+                android:layout_height="@dimen/mainbtnsize"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/buttonsubjek" />
+            
+            <TextView
+                android:id="@+id/txtsubjek"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/mainsubjek"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+				android:textColor="@color/maintxtcolour" />
+            
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Welcome to M-NOTA app</string>
+    <string name="app_name">M-NOTA</string>
+    <string name="mainnota">Nota</string>
+    <string name="mainsubjek">Subjek</string>
+
+</resources>
